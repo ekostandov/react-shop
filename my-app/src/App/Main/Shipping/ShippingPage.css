@@ -1,0 +1,51 @@
+.shipping-page {
+    margin-top: 5px;
+    width: 67%;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: rgba(255,255,255,0.75);
+}
+h1 {
+    padding: 10px;
+    background: #3366cc;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+}
+.shipping-form {
+    margin: 20px 40px;
+}
+.shipping-form .row {
+    margin: 3px;
+}
+.shipping-form p {
+    line-height: 21px;
+    font-size: 13px;
+    text-align: right;
+    padding-right: 5px;
+}
+.shipping-form input {
+    width: 100%;
+}
+.shipping-form select {
+    height: 21px;
+}
+.shipping-form .input-half-width {
+    width: 50%;
+}
+.shipping-form .three-halfs-width {
+    width: 75%;
+}
+.shipping-form-botton {
+    display: block;
+    padding: 5px 15px;
+    color: white;
+    text-decoration: none;
+    background: #3366cc;
+    border-radius: 5px;
+    border: 1px solid white;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 20%;
+}

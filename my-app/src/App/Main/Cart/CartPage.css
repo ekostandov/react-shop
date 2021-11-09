@@ -1,0 +1,27 @@
+.cart-page {
+    position: relative;
+    background-color: rgba(255,255,255,0.75);
+    color: #3366cc;
+    border: 3px solid #3366cc;
+    border-radius: 5px;
+    padding: 50px;
+    margin-top: 5px;
+}
+.cart-page > h1 {
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+hr {
+    height: 1px;
+    background-color: #3366cc;
+    border: #3366cc;
+}
+.cart-page > a > img {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    top: 10px;
+    right: 10px;
+}
