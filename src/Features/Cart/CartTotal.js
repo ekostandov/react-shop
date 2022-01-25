@@ -1,19 +1,25 @@
-import React from 'react'
-import { keys } from 'lodash'
-import products, { getProductsMap } from '../../App/Main/Product/products'
+import { keys } from 'lodash';
+import PropTypes from 'prop-types';
+
+import products, { getProductsMap } from '../../App/Main/Product/products';
 
 const CartTotal = ({
-    productsInCart,
-    productMap = getProductsMap(products),
+  productsInCart,
+  productMap = getProductsMap(products),
 }) => (
-    <div>
-        Total: $
-        {
-            keys(productsInCart).reduce((total,productId) => {
-                return total + (productMap[productId].price * productsInCart[productId])
-            },0)
-        }
-    </div>
-)
+  <div>
+    Total: $
+    {keys(productsInCart).reduce(
+      (total, productId) =>
+        total + productMap[productId].price * productsInCart[productId],
+      0
+    )}
+  </div>
+);
 
-export default CartTotal
+CartTotal.propTypes = {
+  productsInCart: PropTypes.array,
+  productMap: PropTypes.array,
+};
+
+export default CartTotal;

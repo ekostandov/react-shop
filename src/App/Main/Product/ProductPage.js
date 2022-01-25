@@ -1,13 +1,14 @@
-import React from 'react'
-import products, { getProductsMap } from './products'
+import PropTypes from 'prop-types';
 
-const ProductPage = ({
-    productItem = getProductsMap(products),
-    match,
-}) => (
-    <div>
-        {productItem[match.params.productId].name}
-    </div>
-)
+import products, { getProductsMap } from './products';
 
-export default ProductPage
+const ProductPage = ({ productItem = getProductsMap(products), match }) => (
+  <div>{productItem[match.params.productId].name}</div>
+);
+
+ProductPage.propTypes = {
+  productItem: PropTypes.array,
+  match: PropTypes.object,
+};
+
+export default ProductPage;
