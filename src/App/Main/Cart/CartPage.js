@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
+import './CartPage.css';
+
 import CartTotal from '../../../Features/Cart/CartTotal';
 import CartProductList from '../../../Features/Cart/CartProductList';
-import './CartPage.css';
 import CartProductListItemExtended from '../../../Features/Cart/CartProductListItemExtended';
-import { connect } from 'react-redux';
 
 const CartPage = ({
   productsInCart,

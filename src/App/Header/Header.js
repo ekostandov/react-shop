@@ -1,8 +1,8 @@
 import './Header.css';
 
-import Logo from './Logo.js';
+import Logo from './Logo';
 import Mainmenu from './Mainmenu/Mainmenu';
-import Cart from './Cart.js';
+import Cart from './Cart';
 
 const Header = () => (
   <header className='header'>

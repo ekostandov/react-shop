@@ -1,9 +1,11 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import './ProductListItem.css';
-import QuantityInput from '../../../Component/QuantityInput/QuantityInput';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+
+import './ProductListItem.css';
+
+import QuantityInput from '../../../Component/QuantityInput/QuantityInput';
 
 class ProductListItem extends Component {
   static propTypes = {
@@ -74,7 +76,6 @@ class ProductListItem extends Component {
       dispatchAddToCartButton,
       isLiked,
     } = this.props;
-    // == const name = this.props.name;
 
     return (
       <div className='product-list-item'>
@@ -134,51 +135,3 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductListItem);
-
-// const ProductListItem = ({
-//     // name,
-//     // description = 'bla bla bla..',
-//     // image,
-//     // type,
-//     // screenSize,
-//     // capacity,
-//     // price,
-//     }) => (
-//         // <div className="product-list-item">
-//         //     <div className="product-image">
-//         //         <img src={image} alt={name}/>
-//         //     </div>
-//         //     <h2 className="product-title">{name}</h2>
-//         //     <p className="product-description">{description}</p>
-//         //     <div className="produt-type">
-//         //         <span className="product-features">Type:{type}</span>
-//         //     </div>
-//         //     <div className="product-screen-size">
-//         //         <span className="product-features">Screen size:{screenSize}</span>
-//         //     </div>
-//         //     <div className="produt-capacity">
-//         //         <span className="product-features">Capacity:{capacity}</span>
-//         //     </div>
-//         //     <div className="product-quantity">
-//         //         <button>-</button>
-//         //         <input type="text"/>
-//         //         <button>+</button>
-//         //     </div>
-//         //     <div className="product-price">${price}</div>
-//         //     <button className="btn-add-to-cart">Add to cart</button>
-//         // </div>
-// )
-
-// ProductListItem.propTypes = {
-//     name: PropTypes.string.isRequired,
-//     description: PropTypes.string,
-//     image: PropTypes.string,
-//     type: PropTypes.string.isRequired,
-//     screenSize: PropTypes.number,
-//     capacity: PropTypes.number,
-//     price: PropTypes.number.isRequired,
-// }
-
-// ProductListItem.defaultProps = {
-//     description: ' Bla bla bla...'
-// }

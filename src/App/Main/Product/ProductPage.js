@@ -7,8 +7,16 @@ const ProductPage = ({ productItem = getProductsMap(products), match }) => (
 );
 
 ProductPage.propTypes = {
-  productItem: PropTypes.array,
-  match: PropTypes.object,
+  productItem: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+    })
+  ),
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      productId: PropTypes.number,
+    }),
+  }),
 };
 
 export default ProductPage;

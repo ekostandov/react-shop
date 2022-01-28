@@ -1,6 +1,7 @@
-import products from './products.js';
-import ProductListItem from './ProductListItem.js';
 import PropTypes from 'prop-types';
+
+import products from './products';
+import ProductListItem from './ProductListItem';
 
 const ProductList = ({ addProductToCart }) => (
   <div className='product-list'>

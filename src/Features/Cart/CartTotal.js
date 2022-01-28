@@ -18,7 +18,7 @@ const CartTotal = ({
 );
 
 CartTotal.propTypes = {
-  productsInCart: PropTypes.array,
+  productsInCart: PropTypes.object,
   productMap: PropTypes.array,
 };
 

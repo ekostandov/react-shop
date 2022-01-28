@@ -1,9 +1,9 @@
 import '../common/style/reset.css';
 import '../common/style/base.css';
 
-import Header from './Header/Header.js';
-import Main from './Main/Main.js';
-import Footer from './Footer/Footer.js';
+import Header from './Header/Header';
+import Main from './Main/Main';
+import Footer from './Footer/Footer';
 
 const App = () => (
   <div className='App'>

@@ -1,8 +1,9 @@
-import './CartProductListItemExtended.css';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import './CartProductListItemExtended.css';
+
 import QuantityInput from '../../Component/QuantityInput/QuantityInput';
-import { connect } from 'react-redux';
 
 const CartProductListItemExtended = ({
   product,

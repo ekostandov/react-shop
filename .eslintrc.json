@@ -1,6 +1,6 @@
 {
   "extends": ["eslint:recommended", "plugin:react/recommended"],
-  "plugins": ["react"], //"babel"
+  "plugins": ["react", "eslint-plugin-import"],
   "parser": "babel-eslint",
   "rules": {
     "indent": ["error", 2, { "SwitchCase": 1 }],
@@ -14,6 +14,13 @@
         "blankLine": "always",
         "prev": "*",
         "next": ["block-like", "export", "return"]
+      }
+    ],
+    "import/extensions": ["error", { "js": "never", "json": "never" }],
+    "import/order": [
+      "error",
+      {
+        "groups": ["external", "parent", "sibling"]
       }
     ]
   },

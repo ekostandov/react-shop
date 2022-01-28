@@ -27,7 +27,7 @@ const CartProductList = ({
 );
 
 CartProductList.propTypes = {
-  productsInCart: PropTypes.number,
+  productsInCart: PropTypes.object,
   productMap: PropTypes.array,
   ListItemComponent: PropTypes.func,
   removeProductFromCart: PropTypes.func,

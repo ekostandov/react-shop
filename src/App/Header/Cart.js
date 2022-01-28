@@ -4,13 +4,10 @@ import { connect } from 'react-redux';
 
 import './Cart.css';
 
-//import products, { getProductsMap } from '../Main/Product/products';
 import CartTotal from '../../Features/Cart/CartTotal';
 import CartProductList from '../../Features/Cart/CartProductList';
 
-const Cart = (
-  { productsInCart } // , productMap = getProductsMap(products)
-) => (
+const Cart = ({ productsInCart }) => (
   <div className='cart text-center'>
     <CartProductList productsInCart={productsInCart} />
     <CartTotal productsInCart={productsInCart} />
