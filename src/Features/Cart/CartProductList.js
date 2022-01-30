@@ -34,4 +34,12 @@ CartProductList.propTypes = {
   setProductQuantityInCart: PropTypes.func,
 };
 
+CartProductList.defaultProps = {
+  productsInCart: {},
+  productMap: [],
+  ListItemComponent: '',
+  removeProductFromCart: '',
+  setProductQuantityInCart: '',
+};
+
 export default CartProductList;

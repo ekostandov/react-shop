@@ -22,4 +22,9 @@ CartTotal.propTypes = {
   productMap: PropTypes.array,
 };
 
+CartTotal.defaultProps = {
+  productsInCart: {},
+  productMap: [],
+};
+
 export default CartTotal;

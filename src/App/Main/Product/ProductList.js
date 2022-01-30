@@ -41,4 +41,8 @@ ProductList.propTypes = {
   addProductToCart: PropTypes.func,
 };
 
+ProductList.defaultProps = {
+  addProductToCart: '',
+};
+
 export default ProductList;

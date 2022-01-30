@@ -19,4 +19,9 @@ ProductPage.propTypes = {
   }),
 };
 
+ProductPage.defaultProps = {
+  productItem: [],
+  match: {},
+};
+
 export default ProductPage;

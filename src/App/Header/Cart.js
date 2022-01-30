@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import './Cart.css';
-
 import CartTotal from '../../Features/Cart/CartTotal';
 import CartProductList from '../../Features/Cart/CartProductList';
+
+import './Cart.css';
 
 const Cart = ({ productsInCart }) => (
   <div className='cart text-center'>

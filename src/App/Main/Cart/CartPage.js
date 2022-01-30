@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import './CartPage.css';
-
 import CartTotal from '../../../Features/Cart/CartTotal';
 import CartProductList from '../../../Features/Cart/CartProductList';
 import CartProductListItemExtended from '../../../Features/Cart/CartProductListItemExtended';
+
+import './CartPage.css';
 
 const CartPage = ({
   productsInCart,
@@ -36,10 +36,15 @@ const mapStateToProps = () => state => ({
 });
 
 CartPage.propTypes = {
-  productsInCart: PropTypes.array,
-  // productMap: PropTypes.array,
+  productsInCart: PropTypes.object,
   removeProductFromCart: PropTypes.func,
   setProductQuantityInCart: PropTypes.func,
+};
+
+CartPage.defaultProps = {
+  productsInCart: '',
+  removeProductFromCart: '',
+  setProductQuantityInCart: '',
 };
 
 export default connect(mapStateToProps)(CartPage);

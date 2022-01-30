@@ -22,6 +22,10 @@
       {
         "groups": ["external", "parent", "sibling"]
       }
+    ],
+    "react/require-default-props": [
+      "error",
+      { "forbidDefaultForRequired": false, "ignoreFunctionalComponents": false }
     ]
   },
   "parserOptions": {

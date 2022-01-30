@@ -26,4 +26,12 @@ QuantityInput.propTypes = {
   maxValue: PropTypes.number,
 };
 
+QuantityInput.defaultProps = {
+  quantity: 0,
+  onDecrementClick: '',
+  onIncrementClick: '',
+  minValue: 1,
+  maxValue: 10,
+};
+
 export default QuantityInput;

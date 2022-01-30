@@ -13,4 +13,9 @@ CartProductListItem.propTypes = {
   productCount: PropTypes.number,
 };
 
+CartProductListItem.defaultProps = {
+  product: {},
+  productCount: 0,
+};
+
 export default CartProductListItem;

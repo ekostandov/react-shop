@@ -3,28 +3,34 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import './ProductListItem.css';
-
 import QuantityInput from '../../../Component/QuantityInput/QuantityInput';
+
+import './ProductListItem.css';
 
 class ProductListItem extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     description: PropTypes.string,
-    image: PropTypes.string,
+    image: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
     screenSize: PropTypes.number,
     capacity: PropTypes.number,
     price: PropTypes.number.isRequired,
     isLiked: PropTypes.bool,
     dispatchDislike: PropTypes.func,
-    id: PropTypes.number,
+    id: PropTypes.number.isRequired,
     dispatchLike: PropTypes.func,
     dispatchAddToCartButton: PropTypes.func,
   };
 
   static defaultProps = {
     isLiked: false,
+    description: 'No description',
+    screenSize: 'No information',
+    capacity: 'No information',
+    dispatchDislike: '',
+    dispatchLike: '',
+    dispatchAddToCartButton: '',
   };
 
   state = {

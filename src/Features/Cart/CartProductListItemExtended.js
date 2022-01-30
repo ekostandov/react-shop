@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import './CartProductListItemExtended.css';
-
 import QuantityInput from '../../Component/QuantityInput/QuantityInput';
+
+import './CartProductListItemExtended.css';
 
 const CartProductListItemExtended = ({
   product,
@@ -86,6 +86,14 @@ CartProductListItemExtended.propTypes = {
   isLiked: PropTypes.boolean,
   removeProductFromCart: PropTypes.func,
   setProductQuantityInCart: PropTypes.func,
+};
+
+CartProductListItemExtended.defaultProps = {
+  product: {},
+  productCount: 0,
+  isLiked: false,
+  removeProductFromCart: '',
+  setProductQuantityInCart: '',
 };
 
 export default connect(
