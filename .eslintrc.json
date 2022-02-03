@@ -25,7 +25,7 @@
     ],
     "react/require-default-props": [
       "error",
-      { "forbidDefaultForRequired": false, "ignoreFunctionalComponents": false }
+      { "forbidDefaultForRequired": true, "ignoreFunctionalComponents": false }
     ]
   },
   "parserOptions": {

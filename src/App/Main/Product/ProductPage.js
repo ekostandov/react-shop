@@ -9,19 +9,14 @@ const ProductPage = ({ productItem = getProductsMap(products), match }) => (
 ProductPage.propTypes = {
   productItem: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.string,
-    })
-  ),
+      name: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
   match: PropTypes.shape({
     params: PropTypes.shape({
-      productId: PropTypes.number,
-    }),
-  }),
-};
-
-ProductPage.defaultProps = {
-  productItem: [],
-  match: {},
+      productId: PropTypes.number.isRequired,
+    }).isRequired,
+  }).isRequired,
 };
 
 export default ProductPage;

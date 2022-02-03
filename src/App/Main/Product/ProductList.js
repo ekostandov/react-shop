@@ -42,7 +42,7 @@ ProductList.propTypes = {
 };
 
 ProductList.defaultProps = {
-  addProductToCart: '',
+  addProductToCart: null,
 };
 
 export default ProductList;

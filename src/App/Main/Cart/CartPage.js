@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 
 import CartTotal from '../../../Features/Cart/CartTotal';
 import CartProductList from '../../../Features/Cart/CartProductList';
-import CartProductListItemExtended from '../../../Features/Cart/CartProductListItemExtended';
 
 import './CartPage.css';
 
@@ -20,7 +19,6 @@ const CartPage = ({
     <h1>Cart Page</h1>
     <CartProductList
       productsInCart={productsInCart}
-      ListItemComponent={CartProductListItemExtended}
       removeProductFromCart={removeProductFromCart}
       setProductQuantityInCart={setProductQuantityInCart}
     />

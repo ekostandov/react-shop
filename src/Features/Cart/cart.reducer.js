@@ -24,7 +24,7 @@ const cartReducer = (
 
     case 'REMOVE_PRODUCT_FROM_CART': {
       return omit(state, action.id);
-    } // delete id from state
+    }
 
     default: {
       return state;

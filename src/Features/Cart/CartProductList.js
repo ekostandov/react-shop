@@ -1,4 +1,3 @@
-import { keys } from 'lodash';
 import PropTypes from 'prop-types';
 
 import products, { getProductsMap } from '../../App/Main/Product/products';
@@ -6,15 +5,14 @@ import CartProductListItem from './CartProductListItem';
 
 const CartProductList = ({
   productsInCart,
-  productMap = getProductsMap(products),
-  ListItemComponent = CartProductListItem,
+  productMap,
   removeProductFromCart,
   setProductQuantityInCart,
 }) => (
   <div className='cart-product-list'>
     <ul>
-      {keys(productsInCart).map(productId => (
-        <ListItemComponent
+      {Object.keys(productsInCart).map(productId => (
+        <CartProductListItem
           key={productId}
           product={productMap[productId]}
           productCount={productsInCart[productId]}
@@ -28,18 +26,16 @@ const CartProductList = ({
 
 CartProductList.propTypes = {
   productsInCart: PropTypes.object,
-  productMap: PropTypes.array,
-  ListItemComponent: PropTypes.func,
+  productMap: PropTypes.objectOf(PropTypes.object),
   removeProductFromCart: PropTypes.func,
   setProductQuantityInCart: PropTypes.func,
 };
 
 CartProductList.defaultProps = {
+  removeProductFromCart: null,
+  setProductQuantityInCart: null,
   productsInCart: {},
-  productMap: [],
-  ListItemComponent: '',
-  removeProductFromCart: '',
-  setProductQuantityInCart: '',
+  productMap: getProductsMap(products),
 };
 
 export default CartProductList;

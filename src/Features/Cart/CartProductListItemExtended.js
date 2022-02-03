@@ -84,16 +84,14 @@ CartProductListItemExtended.propTypes = {
   product: PropTypes.object,
   productCount: PropTypes.number,
   isLiked: PropTypes.boolean,
-  removeProductFromCart: PropTypes.func,
-  setProductQuantityInCart: PropTypes.func,
+  removeProductFromCart: PropTypes.func.isRequired,
+  setProductQuantityInCart: PropTypes.func.isRequired,
 };
 
 CartProductListItemExtended.defaultProps = {
   product: {},
   productCount: 0,
   isLiked: false,
-  removeProductFromCart: '',
-  setProductQuantityInCart: '',
 };
 
 export default connect(

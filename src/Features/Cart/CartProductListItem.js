@@ -9,12 +9,14 @@ const CartProductListItem = ({ product, productCount }) => (
 );
 
 CartProductListItem.propTypes = {
-  product: PropTypes.object,
+  product: PropTypes.shape({
+    name: PropTypes.string,
+    price: PropTypes.number,
+  }).isRequired,
   productCount: PropTypes.number,
 };
 
 CartProductListItem.defaultProps = {
-  product: {},
   productCount: 0,
 };
 

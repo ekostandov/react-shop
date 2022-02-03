@@ -17,10 +17,10 @@ class ProductListItem extends Component {
     capacity: PropTypes.number,
     price: PropTypes.number.isRequired,
     isLiked: PropTypes.bool,
-    dispatchDislike: PropTypes.func,
+    dispatchDislike: PropTypes.func.isRequired,
     id: PropTypes.number.isRequired,
-    dispatchLike: PropTypes.func,
-    dispatchAddToCartButton: PropTypes.func,
+    dispatchLike: PropTypes.func.isRequired,
+    dispatchAddToCartButton: PropTypes.func.isRequired,
   };
 
   static defaultProps = {
@@ -28,9 +28,6 @@ class ProductListItem extends Component {
     description: 'No description',
     screenSize: 'No information',
     capacity: 'No information',
-    dispatchDislike: '',
-    dispatchLike: '',
-    dispatchAddToCartButton: '',
   };
 
   state = {
@@ -73,7 +70,7 @@ class ProductListItem extends Component {
     const {
       id,
       name,
-      description = 'bla bla bla..',
+      description,
       image,
       type,
       screenSize,

@@ -11,7 +11,7 @@ const QuantityInput = ({
     <button onClick={() => onDecrementClick()} disabled={quantity <= minValue}>
       -
     </button>
-    <input type='text' value={quantity} readOnly />
+    <input value={quantity} readOnly />
     <button onClick={() => onIncrementClick()} disabled={quantity > maxValue}>
       +
     </button>
@@ -20,16 +20,14 @@ const QuantityInput = ({
 
 QuantityInput.propTypes = {
   quantity: PropTypes.number,
-  onDecrementClick: PropTypes.func,
-  onIncrementClick: PropTypes.func,
+  onDecrementClick: PropTypes.func.isRequired,
+  onIncrementClick: PropTypes.func.isRequired,
   minValue: PropTypes.number,
   maxValue: PropTypes.number,
 };
 
 QuantityInput.defaultProps = {
   quantity: 0,
-  onDecrementClick: '',
-  onIncrementClick: '',
   minValue: 1,
   maxValue: 10,
 };
