@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import QuantityInput from '../../Component/QuantityInput/QuantityInput';
+import QuantityInput from 'Component/QuantityInput/QuantityInput';
 
 import './CartProductListItemExtended.css';
 

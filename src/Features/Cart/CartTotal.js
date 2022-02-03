@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import products, { getProductsMap } from '../../App/Main/Product/products';
+import products, { getProductsMap } from 'App/Main/Product/products';
 
 const CartTotal = ({ productsInCart, productMap }) => (
   <div>
