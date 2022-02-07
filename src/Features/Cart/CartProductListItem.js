@@ -1,14 +1,23 @@
-import React from 'react'
+import PropTypes from 'prop-types';
 
-const CartProductListItem = ({
-    product,
-    productCount,
-}) => (
-    <li>
-        <span> {product.name} : </span>
-        <span> {productCount} : </span>
-        <span> {(product.price * productCount)} </span>
-    </li>
-)
+const CartProductListItem = ({ product, productCount }) => (
+  <li>
+    <span> {product.name} : </span>
+    <span> {productCount} : </span>
+    <span> {product.price * productCount} </span>
+  </li>
+);
 
-export default CartProductListItem
+CartProductListItem.propTypes = {
+  product: PropTypes.shape({
+    name: PropTypes.string,
+    price: PropTypes.number,
+  }).isRequired,
+  productCount: PropTypes.number,
+};
+
+CartProductListItem.defaultProps = {
+  productCount: 0,
+};
+
+export default CartProductListItem;

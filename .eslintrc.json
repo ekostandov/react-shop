@@ -1,0 +1,42 @@
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "plugins": ["react", "eslint-plugin-import"],
+  "parser": "babel-eslint",
+  "rules": {
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "arrow-parens": [2, "as-needed", { "requireForBlockBody": true }],
+    "arrow-body-style": ["error", "as-needed"],
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": ["block-like", "export", "return"]
+      }
+    ],
+    "import/extensions": ["error", { "js": "never", "json": "never" }],
+    "import/order": [
+      "error",
+      {
+        "groups": ["external", "parent", "sibling"]
+      }
+    ],
+    "react/require-default-props": [
+      "error",
+      { "forbidDefaultForRequired": true, "ignoreFunctionalComponents": false }
+    ]
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "es2021": true
+  }
+}

@@ -1,13 +1,22 @@
-import React from 'react'
-import products, { getProductsMap } from './products'
+import PropTypes from 'prop-types';
 
-const ProductPage = ({
-    productItem = getProductsMap(products),
-    match,
-}) => (
-    <div>
-        {productItem[match.params.productId].name}
-    </div>
-)
+import products, { getProductsMap } from './products';
 
-export default ProductPage
+const ProductPage = ({ productItem = getProductsMap(products), match }) => (
+  <div>{productItem[match.params.productId].name}</div>
+);
+
+ProductPage.propTypes = {
+  productItem: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    }).isRequired
+  ).isRequired,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      productId: PropTypes.number.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
+
+export default ProductPage;
