@@ -59,10 +59,12 @@ class ProductListItem extends Component {
   }
 
   onLikeClick = () => {
-    if (this.props.isLiked) {
-      this.props.dispatchDislike(this.props.id);
+    const { isLiked, id, dispatchDislike, dispatchLike } = this.props;
+
+    if (isLiked) {
+      dispatchDislike(id);
     } else {
-      this.props.dispatchLike(this.props.id);
+      dispatchLike(id);
     }
   };
 
