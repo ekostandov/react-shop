@@ -40,9 +40,9 @@ CartPage.propTypes = {
 };
 
 CartPage.defaultProps = {
-  productsInCart: '',
-  removeProductFromCart: '',
-  setProductQuantityInCart: '',
+  productsInCart: {},
+  removeProductFromCart: null,
+  setProductQuantityInCart: null,
 };
 
 export default connect(mapStateToProps)(CartPage);
