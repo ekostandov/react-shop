@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
-import products, { getProductsMap } from '../../App/Main/Product/products';
-import CartProductListItem from './CartProductListItem';
+import products, { getProductsMap } from 'App/Main/Product/products';
+import CartProductListItem from 'Features/Cart/CartProductListItem';
 
 const CartProductList = ({
   productsInCart,

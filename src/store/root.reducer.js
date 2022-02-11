@@ -1,5 +1,5 @@
-import productsLikesReducer from '../Features/Likes/like.reducers';
-import cartReducer from '../Features/Cart/cart.reducer';
+import productsLikesReducer from 'Features/Likes/like.reducers';
+import cartReducer from 'Features/Cart/cart.reducer';
 
 const rootReducer = (state = {}, action) => ({
   ...state,
