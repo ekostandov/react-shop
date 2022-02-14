@@ -2,6 +2,7 @@ import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import routes from 'constants/routes';
 
 import QuantityInput from 'Component/QuantityInput/QuantityInput';
 
@@ -91,7 +92,7 @@ class ProductListItem extends Component {
           {isLiked ? <span> &#9829; </span> : <span> &#9825; </span>}
         </button>
         <h2 className='product-title'>
-          <Link to={`/products/${id}`}>{name}</Link>
+          <Link to={`${routes.PRODUCTS}/${id}`}>{name}</Link>
         </h2>
         <p className='product-description'>{description}</p>
         <div className='produt-type'>

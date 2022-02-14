@@ -5,8 +5,8 @@ import { routes } from 'constants/routes';
 function Logo() {
   return (
     <div className='logo'>
-      <Link to={routes.home}>
-        <img src={logo} alt='Logo' />
+      <Link to={routes.HOME}>
+        <img src={logo} alt='' />
       </Link>
     </div>
   );

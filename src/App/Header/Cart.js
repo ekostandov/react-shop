@@ -12,7 +12,7 @@ const Cart = ({ productsInCart }) => (
   <div className='cart text-center'>
     <CartProductList productsInCart={productsInCart} />
     <CartTotal productsInCart={productsInCart} />
-    <Link to={routes.cart}>show cart</Link>
+    <Link to={routes.CART}>show cart</Link>
   </div>
 );
 

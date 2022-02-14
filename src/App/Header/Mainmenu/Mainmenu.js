@@ -9,16 +9,16 @@ function Mainmenu() {
     <div className='menu'>
       <ul>
         <li>
-          <Link to={routes.home}>Home</Link>
+          <Link to={routes.HOME}>Home</Link>
         </li>
         <li>
-          <Link to={routes.products}>Product</Link>
+          <Link to={routes.PRODUCTS}>Product</Link>
         </li>
         <li>
-          <Link to={routes.payment}>Payment</Link>
+          <Link to={routes.PAYMENT}>Payment</Link>
         </li>
         <li>
-          <Link to={routes.shipping}>Shipping</Link>
+          <Link to={routes.SHIPPING}>Shipping</Link>
         </li>
       </ul>
     </div>
