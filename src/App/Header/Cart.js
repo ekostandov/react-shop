@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import CartTotal from 'Features/Cart/CartTotal';
 import CartProductList from 'Features/Cart/CartProductList';
+import { routes } from 'constants/routes';
 
 import './Cart.css';
 
@@ -11,7 +12,7 @@ const Cart = ({ productsInCart }) => (
   <div className='cart text-center'>
     <CartProductList productsInCart={productsInCart} />
     <CartTotal productsInCart={productsInCart} />
-    <Link to='/cart'>show cart</Link>
+    <Link to={routes.cart}>show cart</Link>
   </div>
 );
 
