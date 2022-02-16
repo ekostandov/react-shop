@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import CartTotal from 'Features/Cart/CartTotal';
 import CartProductList from 'Features/Cart/CartProductList';
-import { routes } from 'constants/routes';
+import routes from 'constants/routes';
 
 import './Cart.css';
 
