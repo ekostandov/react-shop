@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import routes from 'constants/routes';
 
 import './Mainmenu.css';
 
@@ -7,16 +8,13 @@ function Mainmenu() {
     <div className='menu'>
       <ul>
         <li>
-          <Link to='/'>Home</Link>
+          <Link to={routes.HOME}>Home</Link>
         </li>
         <li>
-          <Link to='/products'>Product</Link>
+          <Link to={routes.PAYMENT}>Payment</Link>
         </li>
         <li>
-          <Link to='/Payment'>Payment</Link>
-        </li>
-        <li>
-          <Link to='/Shipping'>Shipping</Link>
+          <Link to={routes.SHIPPING}>Shipping</Link>
         </li>
       </ul>
     </div>

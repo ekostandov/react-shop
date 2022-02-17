@@ -26,7 +26,8 @@
     "react/require-default-props": [
       "error",
       { "forbidDefaultForRequired": true, "ignoreFunctionalComponents": false }
-    ]
+    ],
+    "object-shorthand": ["error", "always"]
   },
   "parserOptions": {
     "ecmaFeatures": {

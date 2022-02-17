@@ -6,6 +6,7 @@ import CartPage from './Cart/CartPage';
 import PaymentPage from './Payment/PaymentPage';
 import ShippingPage from './Shipping/ShippingPage';
 import ProductPage from './Product/ProductPage';
+import routes from 'constants/routes';
 
 const Main = () => (
   <main className='main'>
@@ -13,11 +14,11 @@ const Main = () => (
       <div className='row'>
         <div className='col-lg-3'>Filter</div>
         <div className='col-lg-9'>
-          <Route exact path='/' component={ProductList} />
-          <Route exact path='/products/:productId' component={ProductPage} />
-          <Route path='/cart' component={CartPage} />
-          <Route path='/payment' component={PaymentPage} />
-          <Route path='/shipping' component={ShippingPage} />
+          <Route exact path={routes.HOME} component={ProductList} />
+          <Route exact path={routes.PRODUCT} component={ProductPage} />
+          <Route path={routes.CART} component={CartPage} />
+          <Route path={routes.PAYMENT} component={PaymentPage} />
+          <Route path={routes.SHIPPING} component={ShippingPage} />
         </div>
       </div>
     </div>

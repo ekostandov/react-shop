@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import CartTotal from 'Features/Cart/CartTotal';
 import CartProductList from 'Features/Cart/CartProductList';
+import routes from 'constants/routes';
 
 import './CartPage.css';
 
@@ -13,7 +14,7 @@ const CartPage = ({
   setProductQuantityInCart,
 }) => (
   <div className='cart-page'>
-    <Link to='/'>
+    <Link to={routes.HOME}>
       <img src='./images/icons/close-icon.png' alt='' />
     </Link>
     <h1>Cart Page</h1>
