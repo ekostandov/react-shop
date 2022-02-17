@@ -11,9 +11,6 @@ function Mainmenu() {
           <Link to={routes.HOME}>Home</Link>
         </li>
         <li>
-          <Link to={routes.PRODUCTS}>Product</Link>
-        </li>
-        <li>
           <Link to={routes.PAYMENT}>Payment</Link>
         </li>
         <li>
