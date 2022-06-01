@@ -1,13 +1,16 @@
+const LIKE = 'LIKE';
+const DISLIKE = 'DISLIKE';
+
 const productsLikesReducer = (state = {}, action) => {
   switch (action.type) {
-    case 'LIKE': {
+    case LIKE: {
       return {
         ...state,
         [action.id]: true,
       };
     }
 
-    case 'DISLIKE': {
+    case DISLIKE: {
       return {
         ...state,
         [action.id]: false,
@@ -21,3 +24,13 @@ const productsLikesReducer = (state = {}, action) => {
 };
 
 export default productsLikesReducer;
+
+export const likeProduct = id => ({
+  type: LIKE,
+  id,
+});
+
+export const dislikeProduct = id => ({
+  type: DISLIKE,
+  id,
+});
