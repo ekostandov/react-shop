@@ -6,7 +6,7 @@ import QuantityInput from 'Component/QuantityInput/QuantityInput';
 import {
   addProductToCart,
   setProductQuantityInCart,
-  removePRoductFromCart,
+  removeProductFromCart,
 } from 'store/cart';
 
 import './CartProductListItemExtended.css';
@@ -74,7 +74,7 @@ const mapStateToProps = () => (state, props) => ({
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
-    { addProductToCart, setProductQuantityInCart, removePRoductFromCart },
+    { addProductToCart, setProductQuantityInCart, removeProductFromCart },
     dispatch
   );
 
@@ -83,6 +83,7 @@ CartProductListItemExtended.propTypes = {
   productCount: PropTypes.number,
   isLiked: PropTypes.boolean,
   removeProductFromCart: PropTypes.func.isRequired,
+  addProductToCart: PropTypes.func.isRequired,
   setProductQuantityInCart: PropTypes.func.isRequired,
 };
 

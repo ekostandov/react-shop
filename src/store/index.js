@@ -1,10 +1,10 @@
 import { createStore, combineReducers } from 'redux';
 
-import productsLikesReducer from 'store/like';
+import likeReducer from 'store/like';
 import cartReducer from 'store/cart';
 
 const rootReducer = combineReducers({
-  productLikes: productsLikesReducer,
+  productLikes: likeReducer,
   productsInCart: cartReducer,
 });
 
