@@ -27,7 +27,8 @@
       "error",
       { "forbidDefaultForRequired": true, "ignoreFunctionalComponents": false }
     ],
-    "object-shorthand": ["error", "always"]
+    "object-shorthand": ["error", "always"],
+    "import/newline-after-import": ["error", { "count": 1 }]
   },
   "parserOptions": {
     "ecmaFeatures": {

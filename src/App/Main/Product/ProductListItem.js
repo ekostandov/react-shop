@@ -1,10 +1,13 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { Link, generatePath } from 'react-router-dom';
 import routes from 'constants/routes';
 
 import QuantityInput from 'Component/QuantityInput/QuantityInput';
+import { likeProduct, dislikeProduct } from 'store/like';
+import { addProductToCart } from 'store/cart';
 
 import './ProductListItem.css';
 
@@ -18,10 +21,10 @@ class ProductListItem extends Component {
     capacity: PropTypes.number,
     price: PropTypes.number.isRequired,
     isLiked: PropTypes.bool,
-    dispatchDislike: PropTypes.func.isRequired,
+    likeProduct: PropTypes.func.isRequired,
     id: PropTypes.number.isRequired,
-    dispatchLike: PropTypes.func.isRequired,
-    dispatchAddToCartButton: PropTypes.func.isRequired,
+    dislikeProduct: PropTypes.func.isRequired,
+    addProductToCart: PropTypes.func.isRequired,
   };
 
   static defaultProps = {
@@ -60,12 +63,12 @@ class ProductListItem extends Component {
   }
 
   onLikeClick = () => {
-    const { isLiked, id, dispatchDislike, dispatchLike } = this.props;
+    const { isLiked, id, likeProduct, dislikeProduct } = this.props;
 
     if (isLiked) {
-      dispatchDislike(id);
+      dislikeProduct(id);
     } else {
-      dispatchLike(id);
+      likeProduct(id);
     }
   };
 
@@ -79,7 +82,7 @@ class ProductListItem extends Component {
       screenSize,
       capacity,
       price,
-      dispatchAddToCartButton,
+      addProductToCart,
       isLiked,
     } = this.props;
 
@@ -108,7 +111,7 @@ class ProductListItem extends Component {
         <div className='product-price'>${price}</div>
         <button
           className='btn-add-to-cart'
-          onClick={() => dispatchAddToCartButton(id, this.state.productCount)}
+          onClick={() => addProductToCart(id, this.state.productCount)}
         >
           Add to cart
         </button>
@@ -121,23 +124,10 @@ const mapStateToProps = () => (state, props) => ({
   isLiked: state.productLikes[props.id],
 });
 
-const mapDispatchToProps = dispatch => ({
-  dispatchLike: id =>
-    dispatch({
-      type: 'LIKE',
-      id,
-    }),
-  dispatchDislike: id =>
-    dispatch({
-      type: 'DISLIKE',
-      id,
-    }),
-  dispatchAddToCartButton: (id, count) =>
-    dispatch({
-      type: 'ADD_PRODUCT_TO_CART',
-      id,
-      count,
-    }),
-});
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    { likeProduct, dislikeProduct, addProductToCart },
+    dispatch
+  );
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductListItem);

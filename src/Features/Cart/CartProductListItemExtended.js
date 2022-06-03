@@ -1,7 +1,13 @@
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 
 import QuantityInput from 'Component/QuantityInput/QuantityInput';
+import {
+  addProductToCart,
+  setProductQuantityInCart,
+  removeProductFromCart,
+} from 'store/cart';
 
 import './CartProductListItemExtended.css';
 
@@ -66,25 +72,18 @@ const mapStateToProps = () => (state, props) => ({
   isLiked: state.productLikes[props.product.id],
 });
 
-const mapDispatchToProps = dispatch => ({
-  removeProductFromCart: id =>
-    dispatch({
-      type: 'REMOVE_PRODUCT_FROM_CART',
-      id,
-    }),
-  setProductQuantityInCart: (id, quantity) =>
-    dispatch({
-      type: 'SET_PRODUCT_QUANTITY_IN_CART',
-      id,
-      quantity,
-    }),
-});
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    { addProductToCart, setProductQuantityInCart, removeProductFromCart },
+    dispatch
+  );
 
 CartProductListItemExtended.propTypes = {
   product: PropTypes.object,
   productCount: PropTypes.number,
   isLiked: PropTypes.boolean,
   removeProductFromCart: PropTypes.func.isRequired,
+  addProductToCart: PropTypes.func.isRequired,
   setProductQuantityInCart: PropTypes.func.isRequired,
 };
 
