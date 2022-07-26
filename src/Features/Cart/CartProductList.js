@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import products, { getProductsMap } from 'App/Main/Product/products';
-import CartProductListItem from 'Features/Cart/CartProductListItem';
+import CartProductListItemExtended from 'Features/Cart/CartProductListItem';
 
 const CartProductList = ({
   productsInCart,
@@ -12,7 +12,7 @@ const CartProductList = ({
   <div className='cart-product-list'>
     <ul>
       {Object.keys(productsInCart).map(productId => (
-        <CartProductListItem
+        <CartProductListItemExtended
           key={productId}
           product={productMap[productId]}
           productCount={productsInCart[productId]}

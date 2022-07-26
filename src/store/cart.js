@@ -1,6 +1,6 @@
 import { omit } from 'lodash';
 
-const ADD_PRODUCT_TO_CART = 'ADD_PRODUCT_TO_CART';
+const SET_PRODUCT_QUANTITY = 'SET_PRODUCT_QUANTITY';
 const UPDATE_PRODUCT_QUANTITY = 'UPDATE_PRODUCT_QUANTITY';
 const REMOVE_PRODUCT_FROM_CART = 'REMOVE_PRODUCT_FROM_CART';
 
@@ -11,10 +11,14 @@ const initialState = {
 
 const cartReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_PRODUCT_TO_CART: {
+    case SET_PRODUCT_QUANTITY: {
+      const productQuantity = state[action.id]
+        ? state[action.id] + action.count
+        : action.count;
+
       return {
         ...state,
-        [action.id]: (state[action.id] || 0) + action.count,
+        [action.id]: productQuantity,
       };
     }
 
@@ -38,7 +42,7 @@ const cartReducer = (state = initialState, action) => {
 export default cartReducer;
 
 export const addProductToCart = (id, count) => ({
-  type: ADD_PRODUCT_TO_CART,
+  type: SET_PRODUCT_QUANTITY,
   id,
   count,
 });
