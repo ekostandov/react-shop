@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import products, { getProductsMap } from './products';
 
 const ProductPage = ({ productItem = getProductsMap(products), match }) => (
-  <div>{productItem[match.params.productId].name}</div>
+  <div>
+    <div>{productItem[match.params.id].name}</div>
+  </div>
 );
 
 ProductPage.propTypes = {
@@ -14,7 +16,7 @@ ProductPage.propTypes = {
   ).isRequired,
   match: PropTypes.shape({
     params: PropTypes.shape({
-      productId: PropTypes.number.isRequired,
+      id: PropTypes.number.isRequired,
     }).isRequired,
   }).isRequired,
 };
