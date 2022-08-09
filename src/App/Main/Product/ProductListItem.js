@@ -23,9 +23,9 @@ const ProductListItem = props => {
         <img src={image} alt={name} />
       </div>
       <button
-        onClick={() => {
-          isLiked ? dispatch(likeProduct(id)) : dispatch(dislikeProduct(id));
-        }}
+        onClick={() =>
+          isLiked ? dispatch(dislikeProduct(id)) : dispatch(likeProduct(id))
+        }
       >
         {isLiked ? <span> &#9829; </span> : <span> &#9825; </span>}
       </button>
