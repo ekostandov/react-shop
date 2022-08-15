@@ -16,8 +16,4 @@ CartProductListItem.propTypes = {
   productCount: PropTypes.number.isRequired,
 };
 
-// CartProductListItem.defaultProps = {
-//   productCount: 0,
-// };
-
 export default CartProductListItem;
