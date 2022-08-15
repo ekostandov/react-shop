@@ -4,7 +4,7 @@
   "parser": "babel-eslint",
   "rules": {
     "indent": ["error", 2, { "SwitchCase": 1 }],
-    "arrow-parens": [2, "as-needed", { "requireForBlockBody": true }],
+    "arrow-parens": [2, "as-needed", { "requireForBlockBody": false }],
     "arrow-body-style": ["error", "as-needed"],
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
@@ -27,7 +27,8 @@
       "error",
       { "forbidDefaultForRequired": true, "ignoreFunctionalComponents": false }
     ],
-    "object-shorthand": ["error", "always"]
+    "object-shorthand": ["error", "always"],
+    "import/newline-after-import": ["error", { "count": 1 }]
   },
   "parserOptions": {
     "ecmaFeatures": {

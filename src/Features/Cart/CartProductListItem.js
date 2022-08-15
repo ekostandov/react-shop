@@ -13,11 +13,7 @@ CartProductListItem.propTypes = {
     name: PropTypes.string,
     price: PropTypes.number,
   }).isRequired,
-  productCount: PropTypes.number,
-};
-
-CartProductListItem.defaultProps = {
-  productCount: 0,
+  productCount: PropTypes.number.isRequired,
 };
 
 export default CartProductListItem;
