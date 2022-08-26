@@ -15,6 +15,7 @@ const App = () => (
   <div className='App'>
     <Switch>
       <Route
+        exact
         path={[
           routes.HOME,
           routes.CART,
@@ -33,7 +34,7 @@ const App = () => (
       </Route>
 
       <Route>
-        <SecondaryLayout>Test</SecondaryLayout>
+        <SecondaryLayout></SecondaryLayout>
       </Route>
     </Switch>
   </div>
