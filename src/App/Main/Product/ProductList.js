@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
-
-import products from './products';
-import ProductListItem from './ProductListItem';
+import products from 'App/Main/Product/products';
+import ProductListItem from 'App/Main/Product/ProductListItem';
 
 const ProductList = ({ addProductToCart }) => (
   <div className='product-list'>

@@ -1,11 +1,12 @@
 import { Switch, Route } from 'react-router-dom';
-import ProductList from './Main/Product/ProductList';
-import ProductPage from './Main/Product/ProductPage';
-import CartPage from './Main/Cart/CartPage';
-import PaymentPage from './Main/Payment/PaymentPage';
-import ShippingPage from './Main/Shipping/ShippingPage';
+import ProductList from 'App/Main/Product/ProductList';
 import MainLayout from 'layouts/MainLayout';
 import SecondaryLayout from 'layouts/SecondaryLayout';
+import ProductPage from 'App/Main/Product/ProductPage';
+import CartPage from 'App/Main/Cart/CartPage';
+import PaymentPage from 'App/Main/Payment/PaymentPage';
+import ShippingPage from 'App/Main/Shipping/ShippingPage';
+import BasicPage from 'App/Main/BasicPage/BasicPage';
 import routes from 'constants/routes';
 
 import 'common/style/reset.css';
@@ -27,14 +28,16 @@ const App = () => (
         <MainLayout>
           <Route exact path={routes.HOME} component={ProductList} />
           <Route exact path={routes.PRODUCT} component={ProductPage} />
-          <Route path={routes.CART} component={CartPage} />
-          <Route path={routes.PAYMENT} component={PaymentPage} />
-          <Route path={routes.SHIPPING} component={ShippingPage} />
+          <Route exact path={routes.CART} component={CartPage} />
+          <Route exact path={routes.PAYMENT} component={PaymentPage} />
+          <Route exact path={routes.SHIPPING} component={ShippingPage} />
         </MainLayout>
       </Route>
 
       <Route>
-        <SecondaryLayout></SecondaryLayout>
+        <SecondaryLayout>
+          <Route exact path={'/basic-page'} component={BasicPage} />
+        </SecondaryLayout>
       </Route>
     </Switch>
   </div>
