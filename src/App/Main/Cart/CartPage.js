@@ -15,7 +15,7 @@ const CartPage = ({
 }) => (
   <div className='cart-page'>
     <Link to={routes.HOME}>
-      <img src='./images/icons/close-icon.png' alt='' />
+      <img src='./images/icons/close-icon.png' alt='Logo' />
     </Link>
     <h1>Cart Page</h1>
     <CartProductList

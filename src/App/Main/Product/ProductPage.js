@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import products, { getProductsMap } from './products';
+import products, { getProductsMap } from 'App/Main/Product/products';
 
 const ProductPage = ({ productItem = getProductsMap(products), match }) => (
   <div>
