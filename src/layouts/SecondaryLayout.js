@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Main from 'App/Main/Main';
+import Main from 'components/Main/Main';
 
 const SecondaryLayout = ({ children }) => (
   <div className='App'>

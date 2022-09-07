@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import Header from 'App/Header/Header';
-import Main from 'App/Main/Main';
-import Footer from 'App/Footer/Footer';
+import Header from 'components/Header/Header';
+import Main from 'components/Main/Main';
+import Footer from 'components/Footer/Footer';
 
 const MainLayout = ({ children }) => (
   <div className='App'>

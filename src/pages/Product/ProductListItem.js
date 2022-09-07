@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link, generatePath } from 'react-router-dom';
 import routes from 'constants/routes';
 
-import QuantityInput from 'Component/QuantityInput/QuantityInput';
+import QuantityInput from 'components/QuantityInput/QuantityInput';
 import { likeProduct, dislikeProduct } from 'store/like';
 import { addProductToCart } from 'store/cart';
 

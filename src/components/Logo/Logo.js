@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import routes from 'constants/routes';
-import logo from 'App/Header/logo.png';
+import logo from 'components/Logo/logo.png';
 
 function Logo() {
   return (

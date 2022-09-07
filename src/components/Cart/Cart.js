@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import CartTotal from 'Features/Cart/CartTotal';
-import CartProductList from 'Features/Cart/CartProductList';
+import CartTotal from 'components/Cart/CartTotal';
+import CartProductList from 'components/Cart/CartProductList';
 import routes from 'constants/routes';
 
 import './Cart.css';
