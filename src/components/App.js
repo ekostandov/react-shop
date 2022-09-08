@@ -1,12 +1,12 @@
 import { Switch, Route } from 'react-router-dom';
-import ProductList from 'App/Main/Product/ProductList';
+import ProductList from 'pages/Product/ProductList';
 import MainLayout from 'layouts/MainLayout';
 import SecondaryLayout from 'layouts/SecondaryLayout';
-import ProductPage from 'App/Main/Product/ProductPage';
-import CartPage from 'App/Main/Cart/CartPage';
-import PaymentPage from 'App/Main/Payment/PaymentPage';
-import ShippingPage from 'App/Main/Shipping/ShippingPage';
-import BasicPage from 'App/Main/BasicPage/BasicPage';
+import ProductPage from 'pages/Product/ProductPage';
+import CartPage from 'pages/Cart/CartPage';
+import PaymentPage from 'pages/Payment/PaymentPage';
+import ShippingPage from 'pages/Shipping/ShippingPage';
+import BasicPage from 'pages/BasicPage/BasicPage';
 import routes from 'constants/routes';
 
 import 'common/style/reset.css';

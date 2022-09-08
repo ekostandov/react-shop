@@ -1,6 +1,6 @@
-import Logo from './Logo';
-import Mainmenu from './Mainmenu/Mainmenu';
-import Cart from './Cart';
+import Logo from 'components/Logo/Logo';
+import Mainmenu from 'components/Mainmenu/Mainmenu';
+import Cart from 'components/Cart/Cart';
 
 import './Header.css';
 

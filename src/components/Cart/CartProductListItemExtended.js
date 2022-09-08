@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 
-import QuantityInput from 'Component/QuantityInput/QuantityInput';
+import QuantityInput from 'components/QuantityInput/QuantityInput';
 import {
   addProductToCart,
   setProductQuantityInCart,
