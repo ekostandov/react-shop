@@ -64,6 +64,9 @@ const ShippingPage = () => {
           <div className='col-lg-9'>
             <input
               id='first-name'
+              // TODO: text fields didn't work because you forgot to pass name attribute. It's value
+              // should be equal to field name in validation schema
+              name="firstName"
               type='text'
               value={values.firstName}
               onChange={handleChange}
