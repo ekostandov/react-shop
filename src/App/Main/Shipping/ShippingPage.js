@@ -64,9 +64,7 @@ const ShippingPage = () => {
           <div className='col-lg-9'>
             <input
               id='first-name'
-              // TODO: text fields didn't work because you forgot to pass name attribute. It's value
-              // should be equal to field name in validation schema
-              name="firstName"
+              name='firstName'
               type='text'
               value={values.firstName}
               onChange={handleChange}
@@ -86,6 +84,7 @@ const ShippingPage = () => {
           <div className='col-lg-9'>
             <input
               id='last-name'
+              name='lastName'
               type='text'
               value={values.lastName}
               onChange={handleChange}
@@ -105,6 +104,7 @@ const ShippingPage = () => {
           <div className='col-lg-9'>
             <input
               id='address'
+              name='address'
               type='text'
               value={values.address}
               onChange={handleChange}
@@ -124,6 +124,7 @@ const ShippingPage = () => {
           <div className='col-lg-9'>
             <select
               id='country'
+              name='country'
               className='three-halfs-width'
               value={values.country}
               onChange={handleChange}
@@ -138,12 +139,12 @@ const ShippingPage = () => {
         </div>
         <div className='row'>
           <div className='col-lg-3'>
-            {/* TODO: find regexp or ready solution in yup */}
             <label htmlFor='zip-code'>Zip/Postal Code</label>
           </div>
           <div className='col-lg-9'>
             <input
               id='zip-code'
+              name='zipCode'
               className='input-half-width'
               type='text'
               value={values.zipCode}
@@ -164,6 +165,7 @@ const ShippingPage = () => {
           <div className='col-lg-9'>
             <input
               id='city'
+              name='city'
               className='three-halfs-width'
               type='text'
               value={values.city}
@@ -184,6 +186,7 @@ const ShippingPage = () => {
           <div className='col-lg-9'>
             <input
               id='region'
+              name='region'
               className='three-halfs-width'
               type='text'
               value={values.region}
@@ -198,13 +201,13 @@ const ShippingPage = () => {
           </div>
         </div>
         <div className='row'>
-          {/* TODO: find validator for mobile phone */}
           <div className='col-lg-3'>
             <label htmlFor='phone'>Phone</label>
           </div>
           <div className='col-lg-9'>
             <input
               id='phone'
+              name='phone'
               className='input-half-width'
               type='text'
               value={values.phone}
@@ -218,7 +221,6 @@ const ShippingPage = () => {
             )}
           </div>
         </div>
-        {/* TODO: should be submit button. Validation will be triggered on submit */}
         <button
           type='submit'
           className='shipping-form-botton'
